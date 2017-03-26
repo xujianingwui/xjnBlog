@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <title>我的博客</title>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.js"></script>
+  <link rel="stylesheet" href="http://typo.sofi.sh/typo.css">
+  <style>
+    body{
+      padding:10px;
+    }
+    img{
+      max-width:100%;
+    }
+  </style>
 </head>
 <body>
-    <h1>我的第一篇个人博客</h1>
-    <P>我的博客内容很棒啊哦</P>
+  <div id="app">
+# 我的第一篇个人博客
+## 内容标题
+> 世上本没有路，走的人多了自然就有了路。 ——鲁迅  
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1490510409728&di=7f4ccd85ec3ffd0355d75580d70469c4&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fe7cd7b899e510fb3a78c787fdd33c895d0430c44.jpg" alt="">
+  </div>
+  <script>
+    var content=document.getElementById('app');
+    var markdown=content.innerHTML;
+    var html=marked(markdown);
+    content.innerHTML=html;
+
+  </script>
 </body>
 </html>
